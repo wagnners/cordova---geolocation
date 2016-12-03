@@ -1,0 +1,22 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "br.udesc.cadeMeuCarro"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "br.udesc.cadeMeuCarro"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "br.udesc.cadeMeuCarro"
+        }
+    }
+}

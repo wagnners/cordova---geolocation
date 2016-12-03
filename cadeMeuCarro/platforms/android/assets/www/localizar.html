@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+ 
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	   <link rel="stylesheet" type="text/css" href="materialize/css/materialize.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title >Cadê meu carro?</title>
+    </head>
+    <body>
+     <div class="topo-fixo z-depth-1">
+    <div class="valign-wrapper red darken-3 white-text">
+      <h5 class="titulo">Cadastro de Localizacao</h5>
+    </div>
+
+    <ul class="tabs red lighten-2">
+      <li><a href="index.html" class="white-text waves-effect waves-light">Salvar</a></li>
+      <li><a href="localizar.html" class="white-text  waves-effect waves-light">Localizar</a></li>
+     
+    </ul>
+  </div>
+
+  <div id="inserir" class="section black-text">
+<div class="card-panel" id="mnsalvar">
+    <div class="row">
+    <center>TESTE<center>
+    <div>
+    Endereco: <label id="endereco"/>
+    </div>
+    <div id="map"></div>
+    <div>
+      <center><a class="waves-effect waves-light btn centralizado" id="botao">Salvar</a>
+  </div>
+   </div>
+  </div>
+
+
+  <div id="relatorio" class="section black-text">
+    Consultar disciplina - TBD.
+  </div>
+
+  <div class="fixed-action-btn">
+    <a href="" id="salvar" class="btn-floating btn-large red">
+      <i class="material-icons">done</i>
+    </a>
+  </div>
+    <script type="text/javascript">
+     function mudarLocalizar() {
+        document.getElementById(divSalvar).style.display = 'none';
+        document.getElementById(divSalvarLocalizacao).style.display = 'block';
+         
+}
+
+     function mudarSalvar() {
+        document.getElementById(divSalvarLocalizacao).style.display = 'none';
+         document.getElementById(divSalvar).style.display = 'block';
+         
+}
+    </script>
+            
+        
+          <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+	      <script type="text/javascript" src="js/index.js"></script>
+		  <script type="text/javascript" src="materialize/js/materialize.js"></script>
+           <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEQmUpkbIEOW2rDxxA1DyPtPmrrzO7rD0&callback=initMap"
+  type="text/javascript"></script>
+		 
+
+        </script>
+    </body>
+</html>
